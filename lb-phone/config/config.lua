@@ -24,7 +24,7 @@ Config.Item = {}
 Config.Item.Require = true -- require a phone item to use the phone 打开手机需要物品
 Config.Item.Name = "phone" -- name of the phone item 手机物品名称
 
-Config.Item.Unique = false -- should each phone be unique? https://docs.lbphone.com/phone/configuration#unique-phones 独特的手机
+Config.Item.Unique = false -- should each phone be unique? https://docs.lbscripts.com/phone/configuration/#unique-phones 独特的手机
 Config.Item.Inventory = "auto" --[[
     The inventory you use, IGNORE IF YOU HAVE Config.Item.Unique DISABLED.
     Supported: 支持的库存插件
@@ -63,10 +63,32 @@ Config.BlacklistApps = {
     -- ["DarkChat"] = {"police"}
 }
 
+-- 允许修改密码的App
+Config.ChangePassword = {
+    ["Trendy"] = true,
+    ["InstaPic"] = true,
+    ["Birdy"] = true,
+    ["DarkChat"] = true,
+    ["Mail"] = true,
+}
+
+-- 允许删除账号的App
+Config.DeleteAccount = {
+    ["Trendy"] = false,
+    ["InstaPic"] = false,
+    ["Birdy"] = false,
+    ["DarkChat"] = false,
+    ["Mail"] = false,
+    ["Spark"] = false,
+}
+
 Config.Companies = {}
-Config.Companies.Enabled = true -- allow players to call companies?
-Config.Companies.MessageOffline = true -- if true, players can message companies even if no one in the company is online
-Config.Companies.DefaultCallsDisabled = false -- should calles be disabled by default?
+Config.Companies.Enabled = true -- allow players to call companies? 允许玩家呼叫职业
+Config.Companies.MessageOffline = true -- if true, players can message companies even if no one in the company is online 允许玩家向无人在线的职业发消息
+Config.Companies.DefaultCallsDisabled = false -- should receiving company calls be disabled by default?
+Config.Companies.AllowAnonymous = false -- allow players to call companies with "hide caller id" enabled? 呼叫职业时隐藏玩家姓名
+Config.Companies.SeeEmployees = "everyone" -- who should be able to see employees? they will see name, online status & phone number. options are: "everyone", "employees" or "none" 谁能够看到员工列表("everyone":所有人, "employees":仅员工, "none":无)
+Config.Companies.DeleteConversations = true -- allow employees to delete conversations? 允许员工删除消息
 Config.Companies.Services = {
     {
         job = "police",
@@ -153,7 +175,7 @@ Config.Companies.Management = {
     Promote = true, -- if true, the boss can promote employees 允许设置员工等级
 }
 
-Config.CustomApps = {} -- https://docs.lbphone.com/phone/custom-apps
+Config.CustomApps = {} -- https://docs.lbscripts.com/phone/custom-apps/
 
 Config.Valet = {}
 Config.Valet.Enabled = true -- allow players to get their vehicles from the phone 允许通过车库App获得车辆
@@ -359,7 +381,7 @@ Config.AllowExternal = { -- allow people to upload external images? (note: this 
     MarketPlace = false,
     Mail = false,
     Messages = false,
-    Other = true, -- other apps that don't have a specific setting (ex: setting a profile picture for a contact, backgrounds for the phone etc)
+    Other = false, -- other apps that don't have a specific setting (ex: setting a profile picture for a contact, backgrounds for the phone etc)
 }
 
 -- Blacklisted domains for external images. You will not be able to upload from these domains.
@@ -374,6 +396,13 @@ Config.ExternalBlacklistedDomains = {
 -- 允许使用的外部图片域名, 设置为 空/nil/false 允许所有域名
 Config.ExternalWhitelistedDomains = {
     -- "fivemanage.com"
+}
+
+-- Set to false/empty to disable
+-- 允许上传的域名, 设置为 空/false 允许所有域名, 防止通过 DevTools 上传图片
+Config.UploadWhitelistedDomains = { -- domains that are allowed to upload images to the phone (prevent using devtools to upload images)
+    "fivemanage.com",
+    "cfx.re" -- lb-upload
 }
 
 Config.WordBlacklist = {}
@@ -393,21 +422,21 @@ Config.WordBlacklist.Words = {
     -- array of blacklisted words, e.g. "badword", "anotherbadword" 黑名单词语
 }
 
--- 创建账号时自动关注
+-- 创建账号时自动关注的账号
 Config.AutoFollow = {}
 Config.AutoFollow.Enabled = false
 
 Config.AutoFollow.Birdy = {}
 Config.AutoFollow.Birdy.Enabled = true
-Config.AutoFollow.Birdy.Accounts = {} -- array of usernames to automatically follow when creating an account. e.g. "username", "anotherusername"
+Config.AutoFollow.Birdy.Accounts = {} -- array of usernames to automatically follow when creating an account. e.g. "username", "anotherusername" 自动关注账号的用户名
 
 Config.AutoFollow.InstaPic = {}
 Config.AutoFollow.InstaPic.Enabled = true
-Config.AutoFollow.InstaPic.Accounts = {} -- array of usernames to automatically follow when creating an account. e.g. "username", "anotherusername"
+Config.AutoFollow.InstaPic.Accounts = {} -- array of usernames to automatically follow when creating an account. e.g. "username", "anotherusername" 自动关注账号的用户名
 
 Config.AutoFollow.TikTok = {}
 Config.AutoFollow.TikTok.Enabled = true
-Config.AutoFollow.TikTok.Accounts = {} -- array of usernames to automatically follow when creating an account. e.g. "username", "anotherusername"
+Config.AutoFollow.TikTok.Accounts = {} -- array of usernames to automatically follow when creating an account. e.g. "username", "anotherusername" 自动关注账号的用户名
 
 Config.AutoBackup = true -- should the phone automatically create a backup when you get a new phone? 当获取新手机时自动创建备份
 

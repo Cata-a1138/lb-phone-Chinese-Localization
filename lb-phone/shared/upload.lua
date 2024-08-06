@@ -1,7 +1,6 @@
 -----------------------------------------------------------------------------------------------------------------------------------
 --                                       ONLY EDIT THIS FILE IF YOU KNOW WHAT YOU ARE DOING                                      --
 --                                         WE WILL NOT HELP YOU, OR ANSWER ANY QUESTIONS                                         --
---                                  ASKING FOR HELP WITH THIS WILL RESULT IN AN INSTANT TIMEOUT                                  --
 -----------------------------------------------------------------------------------------------------------------------------------
 
 UploadMethods = {
