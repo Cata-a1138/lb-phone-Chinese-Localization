@@ -9,6 +9,7 @@ This is not a leaked or cracked version of lb-phone, I only modified the unencry
 * 翻译 ox_inventory 元数据的标签
 * 为部分配置项添加中文说明
 * 添加 KOOK Bot 上传方式
+* 添加 TURN 服务器, 解决因 NAT 类型问题造成的视频通话黑屏
 
 ## 使用方法
 * 从 Keymaster 下载 lb-phone
