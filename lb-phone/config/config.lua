@@ -47,7 +47,7 @@ Config.PhoneOffset = vector3(0.0, -0.005, 0.0) -- the offset of the phone when a
 Config.DynamicIsland = true -- if enabled, the phone will have a Iphone 14 Pro inspired Dynamic Island. 灵动岛
 Config.SetupScreen = true -- if enabled, the phone will have a setup screen when the player first uses the phone. 欢迎屏幕
 
-Config.AutoDeleteNotifications = false -- notifications that are more than X hours old, will be deleted. set to false to disable. if set to true, it will delete 1 week old notifications. 产出超过X小时的通知, true: 删除超过一周的通知, false: 禁用此功能
+Config.AutoDeleteNotifications = false -- notifications that are more than X hours old, will be deleted. set to false to disable. if set to true, it will delete 1 week old notifications. 删除超过X小时的通知, true: 删除超过一周的通知, false: 禁用此功能
 Config.MaxNotifications = 100 -- the maximum amount of notifications a player can have. if they have more than this, the oldest notifications will be deleted. set to false to disable 最大通知数量, 收到新的删除旧的, 设置false禁用此功能
 Config.DisabledNotifications = { -- an array of apps that should not send notifications, note that you should use the app identifier, found in config.json 不发送通知的App, 使用config.json内的标识符
     -- "DarkChat",
@@ -209,7 +209,7 @@ Config.Voice.HearNearby = true --[[
     Only works with pma-voice
     仅支持pma-voice
 
-    If true, players will be heard on instagram live if they are nearby
+    If true, players will be heard on instapic live if they are nearby
     若为true, 在直播中的玩家和附近玩家均可听到主播说话
     If false, only the person who is live will be heard
     若为false, 仅在直播中的玩家可以听到主播说话
@@ -222,7 +222,6 @@ Config.Voice.HearNearby = true --[[
     This feature is a work in progress and may not work as intended. It may have an impact on performance.
     实验性功能, 可能存在问题或对性能造成影响
 ]]
-
 
 Config.Voice.RecordNearby = true --[[
     Should video recordings include nearby players?
@@ -321,6 +320,10 @@ Config.Locales = { -- languages that the player can choose from when setting up 
     {
         locale = "it",
         name = "Italiano"
+    },
+    {
+        locale = "ua",
+        name = "Українська"
     }
 }
 
@@ -371,13 +374,13 @@ Config.DeleteMessages = true -- allow players to delete messages in the messages
 Config.SyncFlash = true -- should flashlights be synced across all players? May have an impact on performance 同步手电筒, 可能影响性能
 Config.EndLiveClose = false -- should InstaPic live end when you close the phone? 关闭手机时是否结束直播
 
-Config.AllowExternal = { -- allow people to upload external images? (note: this means they can upload nsfw / gore etc) 允许使用外部图片链接
+Config.AllowExternal = { -- allow people to upload external images? (note: this means they can upload nsfw / gore etc)
     Gallery = false, -- allow importing external links to the gallery?
-    Twitter = false, -- set to true to enable external images on that specific app, set to false to disable it.
-    Instagram = false,
-    Tinder = false,
-    TikTok = false,
-    YellowPages = false,
+    Birdy = false, -- set to true to enable external images on that specific app, set to false to disable it.
+    InstaPic = false,
+    Spark = false,
+    Trendy = false,
+    Pages = false,
     MarketPlace = false,
     Mail = false,
     Messages = false,
@@ -417,6 +420,7 @@ Config.WordBlacklist.Apps = { -- apps that should use the word blacklist (if Con
     MarketPlace = true,
     DarkChat = true,
     Mail = true,
+    Other = true,
 }
 Config.WordBlacklist.Words = {
     -- array of blacklisted words, e.g. "badword", "anotherbadword" 黑名单词语
@@ -434,9 +438,9 @@ Config.AutoFollow.InstaPic = {}
 Config.AutoFollow.InstaPic.Enabled = true
 Config.AutoFollow.InstaPic.Accounts = {} -- array of usernames to automatically follow when creating an account. e.g. "username", "anotherusername" 自动关注账号的用户名
 
-Config.AutoFollow.TikTok = {}
-Config.AutoFollow.TikTok.Enabled = true
-Config.AutoFollow.TikTok.Accounts = {} -- array of usernames to automatically follow when creating an account. e.g. "username", "anotherusername" 自动关注账号的用户名
+Config.AutoFollow.Trendy = {}
+Config.AutoFollow.Trendy.Enabled = true
+Config.AutoFollow.Trendy.Accounts = {} -- array of usernames to automatically follow when creating an account. e.g. "username", "anotherusername" 自动关注账号的用户名
 
 Config.AutoBackup = true -- should the phone automatically create a backup when you get a new phone? 当获取新手机时自动创建备份
 
@@ -465,8 +469,7 @@ Config.PromoteBirdy.Enabled = true -- should you be able to promote post? 允许
 Config.PromoteBirdy.Cost = 2500 -- how much does it cost to promote a post? 推广帖子要花费多少钱
 Config.PromoteBirdy.Views = 100 -- how many views does a promoted post get? 推广帖子增加多少浏览量
 
-Config.TikTok = {}
-Config.TikTok.TTS = {
+Config.TrendyTTS = {
     {"English (US) - Female", "en_us_001"},
     {"English (US) - Male 1", "en_us_006"},
     {"English (US) - Male 2", "en_us_007"},
@@ -526,7 +529,7 @@ Config.TikTok.TTS = {
 -- Config.RTCConfig = {
 --     iceServers = {
 --         { urls = "stun:stun.l.google.com:19302" },
---     }
+        --     }
 -- }
 
 Config.Crypto = {}
@@ -579,6 +582,21 @@ Config.KeyBinds = {
         Bind = "RIGHT",
         Description = "更改模式"
     },
+    RollLeft = {
+        Command = "cameraRollLeft",
+        Bind = "Z",
+        Description = "向左旋转相机"
+    },
+    RollRight = {
+        Command = "cameraRollRight",
+        Bind = "C",
+        Description = "向右旋转相机"
+    },
+    FreezeCamera = {
+        Command = "cameraFreeze",
+        Bind = "X",
+        Description = "冻结相机"
+    },
 
     AnswerCall = {
         Command = "answerCall",
@@ -599,6 +617,35 @@ Config.KeyBinds = {
 Config.KeepInput = true -- keep input when nui is focused (meaning you can walk around etc) NUI获取焦点时允许输入 (打开手机时可以移动等)
 
 --[[ PHOTO / VIDEO OPTIONS ]] --
+Config.Camera = {}
+Config.Camera.Enabled = true -- use a custom camera that allows you to walk around while taking photos?
+Config.Camera.Roll = true -- allow rolling the camera to the left & right?
+Config.Camera.AllowRunning = true
+Config.Camera.MaxFOV = 60.0 -- higher = zoomed out
+Config.Camera.MinFOV = 10.0 -- lower = zoomed in
+Config.Camera.MaxLookUp = 80.0
+Config.Camera.MaxLookDown = -80.0
+
+Config.Camera.Vehicle = {}
+Config.Camera.Vehicle.Zoom = true -- allow zooming in vehicles?
+Config.Camera.Vehicle.MaxFOV = 80.0
+Config.Camera.Vehicle.MinFOV = 10.0
+Config.Camera.Vehicle.MaxLookUp = 50.0
+Config.Camera.Vehicle.MaxLookDown = -30.0
+Config.Camera.Vehicle.MaxLeftRight = 120.0
+Config.Camera.Vehicle.MinLeftRight = -120.0
+
+Config.Camera.Selfie = {}
+Config.Camera.Selfie.Offset = vector3(0.05, 0.55, 0.6)
+Config.Camera.Selfie.Rotation = vector3(10.0, 0.0, -180.0)
+Config.Camera.Selfie.MaxFov = 90.0
+Config.Camera.Selfie.MinFov = 50.0
+
+Config.Camera.Freeze = {}
+Config.Camera.Freeze.Enabled = false -- allow players to freeze the camera when taking photos? (this will make it so they can take photos in 3rd person)
+Config.Camera.Freeze.MaxDistance = 10.0 -- max distance the camera can be from the player when frozen
+Config.Camera.Freeze.MaxTime = 60 -- max time the camera can be frozen for (in seconds)
+
 -- Set your api keys in lb-phone/server/apiKeys.lua
 -- 在 lb-phone/server/apiKeys.lua 设置 API Key
 Config.UploadMethod = {}
@@ -609,9 +656,9 @@ Config.UploadMethod = {}
 -- A video tutorial for how to set up Fivemanage can be found here: https://www.youtube.com/watch?v=y3bCaHS6Moc
 -- If you want to host uploads yourself, you can use LBUpload: https://github.com/lbphone/lb-upload
 -- We STRONGLY discourage using Discord as an upload method, as uploaded files may become inaccessible after a while.
-Config.UploadMethod.Video = "Fivemanage" -- "Fivemanage" or "KOOK" or "LBUpload" or "Custom"
-Config.UploadMethod.Image = "Fivemanage" -- "Fivemanage" or "KOOK" or "LBUpload" or "Custom
-Config.UploadMethod.Audio = "Fivemanage" -- "Fivemanage" or "KOOK" or "LBUpload" or "Custom"
+Config.UploadMethod.Video = "KOOK" -- "Fivemanage" or "KOOK" or "LBUpload" or "Custom"
+Config.UploadMethod.Image = "KOOK" -- "Fivemanage" or "KOOK" or "LBUpload" or "Custom
+Config.UploadMethod.Audio = "KOOK" -- "Fivemanage" or "KOOK" or "LBUpload" or "Custom"
 
 Config.Video = {}
 Config.Video.Bitrate = 400 -- video bitrate (kbps), increase to improve quality, at the cost of file size 视频比特率, 以文件大小为代价提高画质
