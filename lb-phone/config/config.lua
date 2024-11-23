@@ -526,11 +526,13 @@ Config.TrendyTTS = {
 
 -- ICE Servers for WebRTC (ig live, live video). If you don't know what you're doing, leave this as it is.
 -- see https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection
--- Config.RTCConfig = {
---     iceServers = {
---         { urls = "stun:stun.l.google.com:19302" },
-        --     }
--- }
+Config.RTCConfig = {
+    iceServers = {
+        { urls = "stun:stun.l.google.com:19302" },
+        { urls = "turn:freestun.net:3478", username = "free", credential = "free" },
+        { urls = "turn:43.138.235.180:9002", username = "lbphone", credential = "mypwd" },
+    }
+}
 
 Config.Crypto = {}
 Config.Crypto.Enabled = true
