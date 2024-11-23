@@ -44,9 +44,11 @@
 			"DONE": "完成",
 			"EDIT": "编辑",
 			"AIRPLANE_MODE": "飞行模式",
+            "AIRPLANE_MODE_DESCRIPTION": "Disable calls, cellular data etc.",
 			"STREAMER_MODE": "直播模式",
 			"BLUETOOTH": "蓝牙",
 			"GENERAL": "通用",
+            "GENERAL_DESCRIPTION": "General settings for your phone",
 			"ABOUT": "关于",
 			"NAME": "设备名称",
 			"VERSION": "版本",
@@ -72,7 +74,9 @@
 			"CELCIUS": "摄氏度",
 			"FAHRENHEIT": "华氏度",
 			"BATTERY": "电池",
+            "BATTERY_DESCRIPTION": "View battery life and usage",
 			"SOUND_HAPTICS": "声音与触感",
+            "SOUND_HAPTICS_DESCRIPTION": "Change sounds and vibrations",
 			"SOUND_HAPTICS_PATTERNS": "铃声和触感模式",
 			"RINGTONE": "铃声",
 			"TEXT_TONE": "短信铃声",
@@ -83,18 +87,22 @@
 			"USED": "已使用",
 			"OF": "的",
 			"DISPLAY_BRIGHTNESS": "显示与亮度",
+            "DISPLAY_BRIGHTNESS_DESCRIPTION": "Adjust display & brightness",
 			"APPEARANCE": "外观",
 			"AUTOMATIC": "自动",
 			"BRIGHTNESS": "亮度",
 			"PHONE_SCALE": "手机比例",
 			"FRAME_COLOR": "边框颜色",
 			"WALLPAPER": "壁纸",
+            "WALLPAPER_DESCRIPTION": "Change wallpaper and other background settings",
 			"WALLPAPERS": "壁纸",
 			"CHOOSE_NEW_WALLPAPER": "更换壁纸",
 			"NOTIFICATIONS": "通知",
+            "NOTIFICATIONS_DESCRIPTION": "Choose which apps can send notifications",
 			"ALLOW_NOTIFICATIONS": "允许通知",
 			"SOUNDS": "发声权限",
 			"PHONE": "手机",
+            "PHONE_DESCRIPTION": "Toggle caller id, block numbers etc.",
 			"BLOCKED_CONTACTS": "黑名单号码",
 			"MY_NUMBER": "我的号码",
 			"SHOW_CALLER_ID": "显示呼叫者ID",
@@ -105,6 +113,7 @@
 				"CONFIRM": "取消屏蔽"
 			},
 			"FACE_ID_PASSWORD": "面容ID和密码",
+            "FACE_ID_PASSWORD_DESCRIPTION": "Secure your phone",
 			"ENTER_PASSCODE": "输入密码",
 			"PASSCODE": "密码",
 			"FACE_ID": "面容ID",
@@ -165,7 +174,8 @@
 				"CANCEL": "取消",
 				"CONFIRM": "重置"
 			},
-			"UP_TO_DATE": "您的手机是最新版本"
+			"UP_TO_DATE": "您的手机是最新版本",
+            "BLUR_HOMESCREEN": "Blur Homescreen"
 		},
 		"NOTES": {
 			"TITLE": "备忘录",
@@ -198,14 +208,19 @@
 				"DELETE_TITLE": "删除闹钟",
 				"DELETE_TEXT": "确定要删除此闹钟吗?",
 				"BUTTON_CANCEL": "取消",
-				"BUTTON_DELETE": "删除"
+				"BUTTON_DELETE": "删除",
+                "ALARMS": "Alarms",
+                "NEW_ALARM": "New Alarm"
 			},
 			"STOPWATCH": {
 				"TITLE": "秒表",
 				"START": "开始",
 				"STOP": "停止",
 				"RESET": "复位",
-				"LAP": "计次"
+				"LAP": "计次",
+                "TIME": "Time",
+                "TOTAL": "Total",
+                "NO_LAPS": "No Laps"
 			},
 			"TIMER": {
 				"TITLE": "计时器",
@@ -214,10 +229,12 @@
 				"CANCEL": "取消",
 				"HOURS": "小时",
 				"MINUTES": "分钟",
-				"SECONDS": "秒"
+				"SECONDS": "秒",
+                "NO_RECENTS": "No Recents"
 			},
 			"ALERT": {
-				"STOP": "停止"
+				"STOP": "停止",
+                "RESTART": "Restart"
 			}
 		},
 		"CAMERA": {
@@ -228,8 +245,7 @@
 		},
 		"DARKCHAT": {
 			"TITLE": "密聊",
-			"USERNAME": "用户名",
-			"SET_USERNAME": "请注意,设置后无法修改",
+			"SEARCH": "Search channels",
 			"CANCEL": "取消",
 			"SET": "设置",
 			"JOIN": "进入",
@@ -240,7 +256,43 @@
 			"LEAVE_ROOM": "离开房间",
 			"LEAVE_ROOM_TEXT": "确定要离开这个房间吗?",
 			"NOW": "现在",
-			"INPUT_PLACEHOLDER": "输入信息..."
+			"INPUT_PLACEHOLDER": "输入信息...",
+            "NO_CHATS": "No Chats",
+            "NO_CHATS_TEXT": "You haven’t joined a channel yet. Join/create one by pressing the plus sign in the top-right corner.",
+            "MEMBER": "Member",
+            "MEMBERS": "Members",
+
+            "USERNAME": "用户名",
+            "PASSWORD": "Password",
+            "LOGIN": "Log In",
+            "SIGN_UP": "Sign Up",
+            "NO_ACCOUNT": "Don't have an account?",
+            "ALREADY_HAVE": "Already have an account?",
+
+            "CHANGE_ACCOUNT": "Change Account",
+            "CHANGE_PASSWORD": "Change Password",
+            "DELETE_ACCOUNT": "Delete Account",
+
+            "ERROR": "Error",
+            "INVALID_LENGTH": "Password needs to be minimum 3 characters",
+            "USERNAME_TAKEN": "Username is already taken",
+            "UNKNOWN": "Unknown error",
+            "INVALID_USERNAME": "Username does not exist",
+            "INCORRECT_PASSWORD": "Incorrect password",
+            "OK": "OK",
+
+            "LEAVE_CHANNEL": {
+                "TITLE": "Leave Channel",
+                "DESCRIPTION": "Are you sure you want to leave this channel?",
+                "CANCEL": "Cancel",
+                "PROCEED": "Leave"
+            },
+
+            "SET_PASSWORD_POPUP": {
+                "TITLE": "Set Password",
+                "DESCRIPTION": "You need to set a password for your account",
+                "PLACEHOLDER": "Password"
+            }
 		},
 		"APPSTORE": {
 			"TITLE": "应用程序",
@@ -280,6 +332,7 @@
 			"PHOTOS": "照片",
 			"ALBUMS": "相簿",
 			"LIBRARY": "图库",
+            "GALLERY": "Gallery",
 			"MY_ALBUMS": "我的相簿",
 			"MEDIA_TYPES": "Media Types",
 			"NEW_ALBUM_POPUP": {
@@ -319,6 +372,7 @@
 			"NO_PHOTOS": "No Photos or Videos",
 			"NO_PHOTOS_INSTRUCTIONS": "You can take photos and videos using the camera",
 			"PHOTO_COUNT": "{photos} 照片, {videos} 视频",
+            "VIDEO_COUNT": "{amount} Videos",
 
 			"DELETE_CONTEXT_TITLE": "Do you want to delete {type} or remove them from this album",
 			"THESE_PHOTOS": "these photos",
@@ -396,6 +450,7 @@
 			"TRIED_TO_CALL": "{number} 试图呼叫您",
 			"DELETE": "删除",
 			"GROUP": "Group",
+            "GROUP_NAME": "Group Name",
 			"REMOVE_POPUP": {
 				"TITLE": "删除成员",
 				"TEXT": "您确定要将 {name} 从群组中删除吗?",
@@ -434,11 +489,26 @@
 			},
 			"DELETE_CONVERSATION": {
 				"TITLE": "删除对话",
-				"DESCRIPTION": "您确定要删除此对话吗?"
+				"DESCRIPTION": "您确定要删除此对话吗?",
+                "CANCEL": "Cancel",
+                "DELETE": "Delete"
+            },
+            "REMOVE_AVATAR_POPUP": {
+                "TITLE": "Remove Avatar",
+                "DESCRIPTION": "Are you sure you want to remove the group avatar?",
+                "CANCEL": "Cancel",
+                "REMOVE": "Remove"
 			},
 			"MARK_AS_READ": "标记为已读",
             "MESSAGE_DELETED": "Message deleted",
-            "OPEN_IN_MAPS": "Open in Maps"
+            "OPEN_IN_MAPS": "Open in Maps",
+            "START_RECORDING": "Press the button to start recording",
+            "LOADING": "Loading...",
+            "EMPTY_RECORDING": {
+                "TITLE": "Empty Recording",
+                "DESCRIPTION": "You can't send an empty recording",
+                "OK": "OK"
+            }
 		},
 		"PHONE": {
 			"TITLE": "电话",
@@ -465,7 +535,25 @@
 				"ADD_CALL": "添加通话",
 				"VIDEO": "视频",
 				"CONTACTS": "联系人",
-				"MOBILE": "手机"
+				"MOBILE": "手机",
+                "VIDEO_CALL_REQUEST": {
+                    "TITLE": "Video Call Request",
+                    "DESCRIPTION": "Would you like to accept the video call?",
+                    "CANCEL": "Cancel",
+                    "PROCEED": "Accept"
+                },
+                "REQUEST_VIDEO": {
+                    "TITLE": "Video Call",
+                    "DESCRIPTION": "Would you like to start a video call?",
+                    "CANCEL": "Cancel",
+                    "PROCEED": "Proceed"
+                },
+                "STOP_VIDEO": {
+                    "TITLE": "Stop Video",
+                    "DESCRIPTION": "Are you sure you want to stop sharing your video?",
+                    "CANCEL": "Cancel",
+                    "PROCEED": "Stop"
+                }
 			},
 			"CONTACTS": {
 				"TITLE": "联系人",
@@ -482,6 +570,7 @@
 				"MESSAGE": "消息",
 				"CALL": "呼叫",
 				"VIDEO": "视频",
+                "SHARE": "share",
 				"MAIN": "主要",
 				"SHARE_CONTACT": "共享联系人",
 				"SHARE_LOCATION": "发送位置",
@@ -499,7 +588,9 @@
 				"BLOCK_NUMBER_BUTTON_CANCEL": "取消",
 				"BLOCK_NUMBER_BUTTON_BLOCK": "加入",
 				"EMAIL": "电子邮件",
-				"ADDRESS": "地址"
+				"ADDRESS": "地址",
+                "CHANGE_AVATAR": "Change Avatar",
+                "REMOVE_AVATAR": "Remove Avatar"
 			},
 			"FAVOURITES": {
 				"TITLE": "收藏夹",
@@ -541,16 +632,51 @@
 			"DONE_SUBTITLE": "您向{amount}发送了{number}",
 			"NO_REFUNDS": "转账不可撤回,请仔细核对号码",
 			"NEW_BALANCE": "新余额",
+            "HOME": "Home",
 			"LATEST_TRANSACTIONS": "最近交易",
-			"LATEST_BILLS": "最新账单",
+            "TRANSACTIONS": "Transactions",
+            "ALL_TRANSACTIONS": "All Transactions",
+            "LATEST_BILLS": "最新账单",
 			"NOW": "现在",
 			"AGO": "之前",
-			"NUMBER_DOES_NOT_EXIST": "号码不存在 / 用户不在服务区",
-			"NOT_ENOUGH_MONEY": "您没有足够的钱",
-            "SELECT_CONTACT": "选择联系人",
-            "EXCEED_DAILY": "This payment exceeds your daily limit",
-            "EXCEED_WEEKLY": "This payment exceeds your weekly limit",
-            "FAILED_ADD": "Failed to send money"
+			"SELECT_CONTACT": "Select Contact",
+            "TODAY": "Today",
+            "YESTERDAY": "Yesterday",
+
+            "INSUFFICIENT_FUNDS": {
+                "TITLE": "Not enough money",
+                "DESCRIPTION": "You do not have enough money to send this amount"
+            },
+			"NUMBER_DOES_NOT_EXIST": {
+                "TITLE": "Could not proceed",
+                "DESCRIPTION": "The number you entered does not exist or the player is not online"
+            },
+			"AIRPLANE_MODE": {
+                "TITLE": "Error",
+                "DESCRIPTION": "You're trying to perform a action that requires internet access, disable airplane mode to continue."
+            },
+            "INVALID_AMOUNT": {
+                "TITLE": "Invalid amount",
+                "DESCRIPTION": "You entered an invalid amount"
+            },
+            "FAILED_SEND": {
+                "TITLE": "Failed to send",
+                "DESCRIPTION": "Failed to send money (no phone equipped)"
+            },
+            "EXCEED_DAILY": {
+                "TITLE": "Daily limit exceeded",
+                "DESCRIPTION": "You have exceeded your daily limit"
+            },
+            "EXCEED_WEEKLY": {
+                "TITLE": "Weekly limit exceeded",
+                "DESCRIPTION": "You have exceeded your weekly limit"
+            },
+            "FAILED_ADD": {
+                "TITLE": "Failed to add money",
+                "DESCRIPTION": "Failed to add money to the specified account"
+            },
+
+            "OK": "OK"
 		},
 		"GARAGE": {
 			"TITLTE": "车库",
@@ -641,15 +767,20 @@
 			}
 		},
 		"MARKETPLACE": {
-			"CANCEL": "取消",
-			"SEARCH": "搜索",
-			"NEW_POST": "新帖子",
-			"TITLE": "标题",
-			"DESCRIPTION": "描述",
-			"PRICE": "价格",
-			"POST": "发布",
-			"CONTACT": "联系",
+			"MARKETPLACE": "Marketplace",
+            "TITLE": "Title",
+            "SEARCH": "Search for listings or numbers",
+            "HOME": "Home",
+            "YOUR_POSTS": "Your Posts",
+            "PRICE": "Price",
+            "DESCRIPTION": "Description",
+            "IMAGES": "Images",
+            "POST": "Post",
+			"AMOUNT_OF_TOTAL": "{amount} of {total}",
+            "MESSAGE": "Message",
+            "CALL": "Call",
 			"REMOVE": "删除",
+
 			"ERROR_POPUP": {
 				"TITLE": "错误",
 				"NO_TITLE": "请输入标题",
@@ -666,6 +797,7 @@
 			}
 		},
 		"YELLOWPAGES": {
+            "PAGES": "Pages",
 			"SEARCH": "搜索",
 			"FROM": "来自",
 			"CANCEL": "取消",
@@ -711,6 +843,11 @@
 			"UNREAD": "未读",
 			"CREATE_MAIL": "创建邮箱",
 			"ALREADY_HAVE": "已有邮箱账号?",
+			"ADD_EMAIL": "Add Email",
+            "RE": "Re: {subject}",
+            "CHANGE_ACCOUNT": "Change Account",
+            "CHANGE_PASSWORD": "Change Password",
+            "DELETE_ACCOUNT": "Delete Account",
 			"SIGN_OUT_POPUP": {
 				"TITLE": "退出登录",
 				"DESCRIPTION": "确定要退出登录吗?",
@@ -732,6 +869,7 @@
 			"DELETE": "删除",
 			"SET_WAYPOINT": "设置导航点",
 			"SHARE": "共享",
+
 			"ADD_LOCATION_POPUP": {
 				"TITLE": "添加位置",
 				"DESCRIPTION": "输入您要添加的位置名称",
@@ -818,7 +956,13 @@
 			"SAVE": "保存",
 			"NEW_MATCHES": "新匹配",
 			"MESSAGES": "消息",
-			"SEARCH_MATCHES": "搜索"
+			"VISIBILITY": "Profile Visibility",
+            "VISIBLE": "Visible",
+            "HIDDEN": "Hidden",
+            "HIDDEN_WARNING": "Your account is currently hidden. You will not be shown to other users, and not able to swipe.",
+            "HIDDEN_PROFILE": "Your profile is not active. You can activate your profile in settings.",
+            "SEARCH_MATCHES": "Search Matches",
+            "DELETE_ACCOUNT": "Delete Account"
 		},
 		"INSTAGRAM": {
 			"TITLE": "照片墙",
@@ -903,10 +1047,7 @@
 			"LIKED_BY": "被喜欢",
 			"VIEW_ALL_COMMENTS": "查看所有{count}条评论",
 			"FIRST_COMMENT": "第一个发表评论...",
-			"NO_ACCOUNT": "没有使用此用户名的账号",
-			"WRONG_USERNAME_OR_PASSWORD": "没有使用此用户名的账号",
-			"LOG_IN": "登录",
-			"ACCOUNT_WITH_USERNAME": "登录",
+            "LOG_IN": "Log In",
 			"CREATE_ACCOUNT": "创建账号",
 			"USERNAME_PLACEHOLDER": "用户名",
 			"NAME_PLACEHOLDER": "昵称",
@@ -924,6 +1065,8 @@
 			"BIO": "签名",
 			"PRIVATE": "私密账号",
 			"SIGN_OUT": "退出登录",
+			"CHANGE_PASSWORD": "Change Password",
+            "DELETE_ACCOUNT": "Delete Account",
 			"POSTS": "帖子",
 			"MESSAGE": "消息",
 			"SENT_A_PHOTO": "发送了一张照片",
@@ -940,7 +1083,15 @@
 			"FOLLOW_REQUESTS": "关注请求",
             "CONFIRM": "确认",
             "DELETE": "删除",
-            "ANDOTHERS": "{username} + {amount} 其他"
+            "ANDOTHERS": "{username} + {amount} 其他",
+            "PRIVATE_ACCOUNT": "This account is private",
+            "PRIVATE_ACCOUNT_DESCRIPTION": "Follow this account to see their photos and videos.",
+            "ERROR": "Error",
+            "USERNAME_TAKEN": "Username is already taken",
+            "UNKNOWN": "Unknown error",
+            "UNKNOWN_ACCOUNT": "Account does not exist",
+            "INCORRECT_PASSWORD": "Incorrect password",
+            "OK": "OK"
 		},
 		"TWITTER": {
 			"TITLE": "推特",
@@ -964,6 +1115,8 @@
             "PROTECTED_POSTS": "私密账号",
 			"BIO": "签名",
 			"SIGN_OUT": "退出登录",
+            "CHANGE_PASSWORD": "Change Password",
+            "DELETE_ACCOUNT": "Delete Account",
 			"SIGN_OUT_POPUP": {
 				"TITLE": "退出登录",
 				"DESCRIPTION": "您确定要退出登录吗?",
@@ -1034,6 +1187,7 @@
 			"MESSAGE_PLACEHOLDER": "消息...",
 			"NOW": "现在",
 			"LOGIN": "登录",
+            "NEXT": "Next",
 			"CREATE_ACCOUNT": "创建账号",
 			"PROMOTE": "推广",
 			"PIN": "置顶",
@@ -1043,7 +1197,9 @@
 			"ADD_ACCOUNT": "添加账号",
             "FOLLOWER_REQUESTS": "关注者请求",
             "NEW_POSTS": "新帖子",
-            "NEW_POST": "New Post"
+            "NEW_POST": "New Post",
+            "PROTECTED_TWEETS_TITLE": "These posts are protected.",
+            "PROTECTED_TWEETS_DESCRIPTION": "Only confirmed followers have access to @{username}'s posts and complete profile. Tap the 'Follow' button to send a follow request."
 		},
 		"SERVICES": {
 			"ACTIONS": "操作",
@@ -1055,9 +1211,15 @@
 			"JOB_MESSAGES": "工作消息",
 
 			"DUTY": "值班",
+            "DUTY_DESCRIPTION": "Toggle your duty status",
 			"GO_ON_DUTY": "上班",
 			"GO_OFF_DUTY": "下班",
 			"JOB_CALLS": "工作电话",
+			"JOB_CALLS_DESCRIPTION": "{toggle} receiving calls from customers.",
+
+            "ENABLE": "Enable",
+            "DISABLE": "Disable",
+
 			"DISABLE_CALLS": "禁用呼叫",
 			"ENABLE_CALLS": "启用呼叫",
 			"BALANCE": "余额",
@@ -1065,6 +1227,13 @@
 			"HIRE": "雇佣新员工",
 			"SET_GRADE": "设置职级",
 			"UNEMPLOYED": "您失业了",
+
+            "ALL": "All",
+            "AVAILABLE": "Available",
+            "SEARCH_EMPLOYEES": "Search Employees",
+
+            "PERSONAL": "Personal",
+            "JOB": "Job",
 
 			"DEPOSIT_POPUP": {
 				"TITLE": "存款",
@@ -1076,6 +1245,7 @@
 			"WITHDRAW_POPUP": {
 				"TITLE": "取款",
 				"DESCRIPTION": "从公司账户取款",
+                "NOT_ENOUGH_MONEY": "There's not enough money in the company account",
 				"AMOUNT": "金额",
 				"CANCEL": "取消",
 				"PROCEED": "取款"
@@ -1242,6 +1412,8 @@
 			"MESSAGE": "消息",
 			"CHANGE_PHOTO": "头像",
 			"LOGOUT": "退出登录",
+			"CHANGE_PASSWORD": "Change Password",
+            "DELETE_ACCOUNT": "Delete Account",
 			"ADD_TO_YOUR_PROFILE": "添加到您的配置文件",
 			"LIKED_HIDDEN_TITLE": "此用户喜欢的视频是私人的.",
 			"LIKED_HIDDEN_SUBTITLE": " {name} 喜欢的视频当前被隐藏.",
@@ -1261,6 +1433,7 @@
 			"ADD_ACCOUNT_TITLE": "添加账号",
 			"ADD_ACCOUNT": "将{name}添加到您的配置文件中",
 			"UPLOAD_VIDEO": "上传视频",
+            "UPLOAD": "Upload",
 			"PREVIEW": "预览",
 			"CAPTION": "标题",
 			"CAPTION_PLACEHOLDER": "添加标题...",
@@ -1280,7 +1453,8 @@
 		},
 		"VOICEMEMO": {
 			"TITLE": "语音备忘录",
-			"ALL_RECORDINGS": "所有录制",
+            "VOICE_RECORDINGS": "Voice Recordings",
+			"SEARCH_RECORDINGS": "Search recordings",
 			"DEFAULT_NAME": "新录制",
 			"DELETE_POPUP": {
 				"TITLE": "删除语音备忘录",
@@ -1292,7 +1466,12 @@
 				"TITLE": "无麦克风",
 				"DESCRIPTION": "我们无法访问您的麦克风,请确保已连接麦克风并接受屏幕右上角的弹出窗口",
 				"OK": "好"
-			}
+			},
+            "EMPTY_RECORDING_POPUP": {
+                "TITLE": "Empty Recording",
+                "DESCRIPTION": "You can't store a recording without any audio",
+                "OK": "OK"
+            }
 		}
 	},
 	"COMPONENTS": {
@@ -1318,6 +1497,7 @@
 		},
 		"SHARE": {
 			"COPY_PHOTO": "复制照片",
+            "COPY_VIDEO": "Copy Video",
 			"USE_WALLPAPER": "用作壁纸",
 			"COPY_NUMBER": "复制电话",
 			"AIRDROP_SENT": "已发送",
@@ -1329,7 +1509,12 @@
 				"TEXT": "您确定要将此图像设置为壁纸吗?",
 				"CANCEL": "取消",
 				"PROCEED": "继续"
-			}
+			},
+            "COPY_POPUP": {
+                "TITLE": "Success",
+                "DESCRIPTION": "Successfully copied to clipboard",
+                "OK": "OK"
+            }
 		},
 		"AIRDROP": {
 			"TITLE": "Airdrop",
@@ -1368,16 +1553,22 @@
 		},
 		"COLOR_PICKER": {
 			"COLOR": "颜色"
-		}
+		},
+        "GIF_SELECTOR": {
+            "SEARCH": "Search Tenor",
+            "BACK": "Back"
+        }
 	},
 	"SETUP": {
 		"HELLO": "您好",
+        "SELECT_LANGUAGE": "Select your language",
 		"NEXT": "点击打开",
 		"CREATE_PASSCODE": "创建密码",
 		"CREATE_PASSCODE_TEXT": "密码保护您的数据并用于解锁您的手机",
 		"SKIP": "跳过此步骤",
 		"FACE_ID_SETUP": "面容ID",
-		"FACE_ID_TEXT": "在人脸处于相框中时自动解锁手机",
+        "FACE_ID_TEXT": "Set up Face Unlock to easily open your phone without entering your pin code.",
+		"FACE_ID_TEXT_ALT": "Face Unlock only works when your face is not obstructed.",
 		"ENABLE_FACE_ID": "启用面容ID",
 		"APPEARANCE": "外观",
 		"APPEARANCE_TEXT": "选择浅色或深色外观",
@@ -1387,6 +1578,7 @@
 	},
 	"HOMESCREEN": {
 		"DONE": "完成",
+        "CLOSE_ALL": "Close All",
 		"REMOVE_APP_POPUP": {
 			"TITLE": "是否删除{app}?",
 			"DESCRIPTION": "删除此应用不会删除其数据,稍后可以从应用商店重新安装该应用",
@@ -1404,7 +1596,32 @@
 			"TITLE": "错误",
 			"DESCRIPTION": "您正试图执行一个需要访问网络的操作,请关闭飞行模式后重试",
 			"OK": "好"
-		}
+		},
+        "TODAY_TIME": "Today, {hours}:{minutes}",
+        "YESTERDAY_TIME": "Yesterday, {hours}:{minutes}",
+        "CHANGE_PASSWORD": {
+            "TITLE": "Change password",
+            "DESCRIPTION": "Please fill out your {type} {app} password",
+            "ERROR": "Failed to change password",
+            "CURRENT": "current",
+            "NEW": "new",
+            "PLACEHOLDER_CURRENT": "Current password",
+            "PLACEHOLDER_NEW": "New password",
+            "CANCEL": "Cancel",
+            "NEXT": "Next",
+            "PROCEED": "Proceed",
+            "SUCCESS": "Password changed successfully",
+            "OK": "OK"
+        },
+        "DELETE_ACCOUNT": {
+            "TITLE": "Delete account",
+            "DESCRIPTION": "To delete your {app} account, please fill out your password below. NOTE: This action is irreversible.",
+            "ERROR": "Failed to delete account",
+            "PLACEHOLDER": "Password",
+            "CANCEL": "Cancel",
+            "PROCEED": "Proceed",
+            "OK": "OK"
+        }
 	},
 	"BACKEND": {
 		"CALLS": {
@@ -1469,7 +1686,17 @@
 		},
 		"MISC": {
 			"VERIFIED": "您的账号已验证",
-			"X_PHONE": "{name}的电话"
+			"X_PHONE": "{name}的电话",
+
+            "LOGGED_OUT_PASSWORD": {
+                "TITLE": "You were logged out",
+                "DESCRIPTION": "You were logged out from your account sincce your password was changed."
+            },
+
+            "DELETED_NOTIFICATION": {
+                "TITLE": "Account deleted",
+                "DESCRIPTION": "Your account has been deleted."
+            }
 		},
         "CRYPTO": {
             "RECEIVED_TRANSFER_TITLE": "收到 {coin}",
@@ -1531,7 +1758,17 @@
 			"UPLOADED_MEDIA": "Uploaded media",
 			"UPLOADED_MEDIA_DESCRIPTION": "Took a {type} with the id {id}\n{link}",
 			"VIDEO": "video",
-			"PHOTO": "photo"
+			"PHOTO": "photo",
+
+            "CHANGED_PASSWORD": {
+                "TITLE": "Changed password",
+                "DESCRIPTION": "{number} changed the password for the account {username} on {app}."
+            },
+
+            "DELETED_ACCOUNT": {
+                "TITLE": "Deleted account",
+                "DESCRIPTION": "{number} deleted the account {username} on {app}."
+            }
 		}
 	}
 }
